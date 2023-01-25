@@ -26,7 +26,7 @@ class Nnetwork:
         self.no_of_hidden_nodes = no_of_hidden_nodes
         self.learning_rate = learning_rate 
         self.create_weight_matrices()
-        
+
     def create_weight_matrices(self):
         """ A method to initialize the weight matrices of the neural network"""
         rad = 1 / np.sqrt(self.no_of_in_nodes)
@@ -40,7 +40,7 @@ class Nnetwork:
 
     def train(self, input_vector, target_vector):
         pass # More work is needed to train the network
-            
+  
     def run(self, input_vector):
         """
         running the network with an input vector 'input_vector'. 
