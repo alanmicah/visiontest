@@ -12,6 +12,6 @@ Currently the video feed will display text on the screen to indicate when a drin
 
 ## Next Steps
 
-To a more broader range of acceptable hand gestures to be detected as drinking, be able to recognise the hand gesture and detect if a drinking object is in frame and finally whether or not a face is in frame.
+To detect a broader range of acceptable hand gestures to be detected as drinking, be able to recognise the hand gesture and detect if a drinking object is in frame and finally whether or not a face is in frame.
 
 A specifically trained model that can recognise all these motions together as drinking would be ideal.
