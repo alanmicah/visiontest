@@ -6,7 +6,7 @@ Locate and demarcate hand gestures and drinking containers such as mugs, cups an
 
 Using [Mediapipe](https://google.github.io/mediapipe/) to perceive the shape of hands. This is done using Mediapipe's firstly the Palm Detection Model to detect the intial location of each hand and then using the Hand LandMark Model to find localise 21 precise keypoints of hand and knuckle coordinates.
 
-Also using OpenCV to maintain the video feed and on screen drawings and text.
+Also using [OpenCV](https://opencv.org/) to maintain the video feed and on screen drawings and text.
 
 Currently the video feed will display text on the screen to indicate when a drinking motion is detected, this is only using a fixed range of custom lower and upper coordiante boundaries.
 
