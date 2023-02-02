@@ -8,7 +8,7 @@ Using [Mediapipe](https://google.github.io/mediapipe/) to perceive the shape of 
 
 Also using [OpenCV](https://opencv.org/) to maintain the video feed and on screen drawings and text.
 
-Currently the video feed will display text on the screen to indicate when a drinking motion is detected, this is only using a fixed range of custom lower and upper coordiante boundaries.
+Currently the video feed will display text on the screen to indicate when a drinking motion is detected, this is only using a fixed range of custom lower and upper coordinate boundaries.
 
 ## Next Steps
 
