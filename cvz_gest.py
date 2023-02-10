@@ -1,5 +1,6 @@
 from cvzone.HandTrackingModule import HandDetector
 from cvzone.FaceDetectionModule import FaceDetector
+from cvzone.ClassificationModule import Classifier
 import cv2
 
 # detector = HandDetector(maxHands=1, detectionCon=0.8)
@@ -49,15 +50,18 @@ import cv2
 cap = cv2.VideoCapture(0)
 detector = HandDetector(detectionCon=0.8, maxHands=2)
 detector2 = FaceDetector()
+detector3 = Classifier
+
 while True:
     # Get image frame
     success, img = cap.read()
     # Find the hand and its landmarks
     hands, img = detector.findHands(img)  # with draw
-    img1, bboxss = detector2.findFaces(img)
+    img1, bboxf = detector2.findFaces(img)
+    img2, bbox3 = detector3.getPrediction(img)
     # hands = detector.findHands(img, draw=False)  # without draw
 
-    if hands and bboxss:
+    if hands and bboxf:
         # Hand 1
         hand1 = hands[0]
         lmList1 = hand1["lmList"]  # List of 21 Landmark points
@@ -66,10 +70,11 @@ while True:
         handType1 = hand1["type"]  # Handtype Left or Right
 
         fingers1 = detector.fingersUp(hand1)
-        print(fingers1)
+        print(lmList1)
+        print("-------")
 
         # bboxInfo - "id","bbox","score","center"
-        center = bboxss[0]["center"]
+        center = bboxf[0]["center"]
         cv2.circle(img1, center, 5, (255, 0, 255), cv2.FILLED)
 
         if len(hands) == 2:
